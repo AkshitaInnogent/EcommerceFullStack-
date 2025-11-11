@@ -1,0 +1,20 @@
+body {
+  background: Cornsilk	;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.system-page {
+  box-sizing: border-box;
+}
+.btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 7px;
+  font-size: 1.08em;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.btn:hover {
+  background: #0056b3;
+}

@@ -1,0 +1,27 @@
+.profile-menu {
+  position: absolute;
+  right: 32px;
+  top: 60px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 #d7d7d749;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  min-width: 160px;
+}
+.profile-menu a, .profile-menu button {
+  color: #343a40;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 4px 0;
+  font-size: 1.08em;
+  cursor: pointer;
+  text-decoration: none;
+}
+.profile-menu a:hover, .profile-menu button:hover {
+  color: #007bff;
+}

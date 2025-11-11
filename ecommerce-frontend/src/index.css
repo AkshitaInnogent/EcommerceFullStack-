@@ -1,0 +1,4 @@
+/* Minimal global reset */
+* {
+  box-sizing: border-box;
+}
