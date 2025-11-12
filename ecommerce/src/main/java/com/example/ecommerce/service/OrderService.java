@@ -133,4 +133,12 @@ public class OrderService {
             .country(address.getCountry())
             .build();
     }
+
+    @Transactional
+    public void deleteOrder(Long id) {
+        Order order = orderRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Order not found"));
+        orderRepository.delete(order);
+    }
+
 }

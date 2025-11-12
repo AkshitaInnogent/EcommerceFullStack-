@@ -9,11 +9,24 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.title} loading="lazy" />
-      <h3>{product.title}</h3>
-      <p>${product.price}</p>
-      <Link to={`/product/${product.id}`}>View Details</Link>
-      <button onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
+      <div className="product-image-container">
+        <img src={product.image} alt={product.title} loading="lazy" />
+      </div>
+
+      <h3 className="product-title">{product.title}</h3>
+      <p className="product-price">₹{product.price}</p>
+
+      <div className="product-buttons">
+        <Link to={`/product/${product.id}`} className="view-btn">
+          View Details
+        </Link>
+        <button
+          className="cart-btn"
+          onClick={() => dispatch(addToCart(product))}
+        >
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 };

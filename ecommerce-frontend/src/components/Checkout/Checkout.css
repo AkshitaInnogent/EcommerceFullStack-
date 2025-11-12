@@ -1,31 +1,83 @@
-.checkout {
-  max-width: 600px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 32px 30px;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px 0 #e4e4e478;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+
+.checkout-container {
+  max-width: 750px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Playfair Display', serif;
+  color: #09384f;
 }
-.checkout h1,
-.checkout h2 {
-  margin-bottom: 18px;
+
+.checkout-title {
   text-align: center;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #095786;
 }
-.checkout form input {
-  margin-bottom: 14px;
+
+.checkout-form h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #007092;
+  border-left: 4px solid #095786;
+  padding-left: 10px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.input-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.checkout-form input {
   width: 100%;
-  padding: 8px 12px;
-  border: 1px solid #ebebeb;
-  border-radius: 7px;
-  font-size: 1.02em;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Playfair Display', serif;
+  transition: all 0.3s ease;
 }
-.checkout .btn {
-  margin-top: 15px;
-  background: #007bff;
+
+.checkout-form input:focus {
+  border-color: #095786;
+  box-shadow: 0 0 6px rgba(9, 87, 134, 0.3);
+  outline: none;
+}
+
+.place-order-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #0090ab, #095786);
   color: #fff;
   border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 1.08em;
-  width: 100%;
+  padding: 14px 0;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.place-order-btn:hover {
+  background: linear-gradient(90deg, #095786, #0090ab);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .checkout-container {
+    padding: 25px 20px;
+  }
+  .checkout-title {
+    font-size: 1.8em;
+  }
 }

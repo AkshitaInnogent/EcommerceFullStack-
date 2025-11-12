@@ -1,3 +1,6 @@
+/* Import same font as ProductCard and LandingPage */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+
 .cart {
   max-width: 700px;
   margin: 30px auto;
@@ -5,10 +8,15 @@
   padding: 32px 28px;
   border-radius: 16px;
   box-shadow: 0 4px 18px 0 #e4e4e456;
+  font-family: 'Playfair Display', serif;
+  color: #095786;
 }
+
 .cart h1 {
   margin-bottom: 18px;
+  font-weight: 700;
 }
+
 .cart-item {
   display: flex;
   gap: 18px;
@@ -16,51 +24,97 @@
   border-bottom: 1px solid #eee;
   padding: 12px 0;
 }
+
 .cart-item img {
   width: 80px;
   border-radius: 8px;
   border: 1px solid #eee;
 }
+
 .cart-item h3 {
   margin: 0 0 4px 0;
+  color: #095786;
+  font-weight: 600;
 }
+
 .cart-item p {
   margin-bottom: 6px;
   font-size: 1.05em;
-  color: #222;
+  color: #0090ab;
+  font-weight: 500;
 }
+
 .cart-item button {
   margin-right: 10px;
   background: #e9ecef;
   padding: 2px 10px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: background 0.3s;
 }
+
+.cart-item button:hover {
+  background: #d0e7f5;
+}
+
+/* Promo Section */
 .promo {
   margin-top: 18px;
   display: flex;
   gap: 8px;
 }
+
 .promo input {
   flex: 1;
   padding: 7px 10px;
   border: 1px solid #eee;
   border-radius: 6px;
+  font-family: 'Playfair Display', serif;
 }
+
 .promo button {
-  background: #007bff;
+  background: linear-gradient(90deg, #095786, #0090ab);
   color: #fff;
   border: none;
   padding: 7px 20px;
   border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+  transition: background 0.3s;
 }
+
+.promo button:hover {
+  background: linear-gradient(90deg, #0090ab, #095786);
+}
+
+/* Checkout Button */
 .cart .btn {
   margin-top: 22px;
-  background: #28a745;
+  background: linear-gradient(90deg, #0090ab, #095786);
   color: #fff;
   border: none;
   padding: 10px 30px;
   border-radius: 7px;
   font-size: 1.1em;
   display: inline-block;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cart .btn:hover {
+  background: linear-gradient(90deg, #095786, #0090ab);
+  transform: translateY(-2px);
+}
+.totals {
+  margin-top: 15px;
+  background: #f8f9fa;
+  padding: 12px 18px;
+  border-radius: 10px;
+}
+
+.totals p {
+  margin: 4px 0;
+  font-size: 1.05em;
 }

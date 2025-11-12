@@ -7,6 +7,7 @@ import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Orders from './components/Orders/Orders';
 import './App.css';
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/orders" element={<Orders />} />
-        <Route path="/profile" element={<div>Akshita Jaiswal</div>} />
+        <Route path="/profile" element={<Profile/>} />
       </Routes>
     </Router>
   );

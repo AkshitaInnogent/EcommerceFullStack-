@@ -14,15 +14,19 @@ const ProductDetails = () => {
     fetchProductById(id).then((res) => setProduct(res.data));
   }, [id]);
 
-  if (!product) return <div>Loading...</div>;
+  if (!product) return <div className="loading">Loading...</div>;
 
   return (
     <div className="product-details system-page">
-      <img src={product.image} alt={product.title} />
-      <h1>{product.title}</h1>
-      <p>{product.description}</p>
-      <p>${product.price}</p>
-      <button onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
+      <div className="image-section">
+        <img src={product.image} alt={product.title} />
+      </div>
+      <div className="info-section">
+        <h1>{product.title}</h1>
+        <p className="desc">{product.description}</p>
+        <p className="price">${product.price}</p>
+        <button onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
+      </div>
     </div>
   );
 };

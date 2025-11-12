@@ -1,48 +1,90 @@
+/* Import Playfair Display font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+
 .header {
-  background: BurlyWood;
+  background: linear-gradient(90deg, #095786, #0090ab);
   color: #fff;
-  padding: 16px 0;
+  padding: 26px 44px; /* Increased height */
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 15;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  font-family: 'Playfair Display', serif;
 }
+
+/* Home Icon */
 .logo a {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-left: 32px;
+  color: #e6cea0;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease;
 }
+
+.logo a:hover {
+  transform: scale(1.15);
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  flex: 1;
+}
+
+.title h1 {
+  font-size: 2.2em;
+  color: #e6cea0;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1.2px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Icons Section */
 .icons {
   display: flex;
   align-items: center;
-  gap: 22px;
-  margin-right: 32px;
-}
-.cart-icon {
-  color: #fff;
-  text-decoration: none;
+  gap: 26px;
   position: relative;
-  font-size: 1.15em;
 }
-.badge {
-  background: #dc3545;
-  color: #fff;
-  font-size: 0.9em;
-  border-radius: 50%;
-  padding: 3px 8px;
-  position: absolute;
-  top: -9px;
-  left: 44px;
-}
-button {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 5px 16px;
+
+/* Cart + Notification + Profile Icons */
+.cart-icon,
+.notification-icon,
+.profile-btn {
+  position: relative;
+  color: #e6cea0;
   cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.cart-icon:hover,
+.notification-icon:hover,
+.profile-btn:hover {
+  transform: scale(1.15);
+  color: #fff;
+}
+
+/* Notification + Cart Badges */
+.badge {
+  background: linear-gradient(135deg, #db4646, #ae0000);
+  color: #fff;
+  font-size: 0.75em;
+  border-radius: 50%;
+  padding: 3px 7px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  font-weight: bold;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Profile Button Reset */
+.profile-btn {
+  background: none;
+  border: none;
+  outline: none;
 }
